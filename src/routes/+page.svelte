@@ -7,16 +7,50 @@
 	import CallToAction from "$lib/components/layout/CallToAction.svelte";
 	import AboutTeaser from "$lib/components/layout/AboutTeaser.svelte";
 	import LogoScroller from "$lib/components/layout/LogoScroller.svelte";
-	import Hero from "$lib/components/layout/hero-sections/Hero.svelte";
+	import CustomerCardHero from "$lib/components/layout/hero-sections/CustomerCardHero.svelte";
 </script>
 
-<Hero
-	title="Elevate your business with thoughtful design"
-	subtitle="Solutions that enhance user experience, and improve visual communication."
-	imageSrc="/sample.png"
-	generating
+<CustomerCardHero
+  centered={true}
+  title="Healthcare shifts covered. Without the chaos."
+  subtitle="Get immediate access to a remote workforce of qualified doctors—flexible, affordable, and fully integrated into your workflows."
+  customers={[
+    {
+      name: "Sarah Khan",
+      position: "GP partner, NHS practice",
+      imageSrc: "/generated/image-a-confident-british-pakistani-female-gp-.webp"
+    },
+    {
+      name: "James O’Neill",
+      position: "Operations lead, NHS 111",
+      imageSrc: "/generated/image-a-british-male-nhs-operations-lead-is-in.webp"
+    },
+    {
+      name: "Priya Mehta",
+      position: "Head of clinical admin, City Health",
+      imageSrc: "/generated/image-a-british-indian-female-healthcare-admin.webp"
+    },
+    {
+      name: "David Clarke",
+      position: "Director, Care Solutions Group",
+      imageSrc: "/generated/image-a-white-british-male-director-is-portray.webp"
+    },
+    {
+      name: "Amelia Roberts",
+      position: "Clinical services manager, UnityMed",
+      imageSrc: "/generated/image-a-young-british-female-clinical-manager-.webp"
+    }
+  ]}
 />
-<LogoScroller label="" generating />
+<LogoScroller
+	label="Trusted by industry leaders"
+	logoUrls={[
+		'https://logo.clearbit.com/bupa.com',
+		'https://logo.clearbit.com/spirehealthcare.com',
+		'https://logo.clearbit.com/axa.com',
+		'https://logo.clearbit.com/nuffieldhealth.com'
+	]}
+/>
 
 <Summary
 	generating
